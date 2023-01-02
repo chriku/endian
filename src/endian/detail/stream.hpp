@@ -94,6 +94,11 @@ public:
         return m_data + m_position;
     }
 
+    void space(std::size_t n)
+    {
+        assert(n <= remaining_size());
+    }
+
 private:
     /// Data pointer to buffer
     data_ptr_type m_data;
